@@ -3,20 +3,23 @@ $( document ).ready(function() {
     M.AutoInit();
 
     console.log(model)
-
-    var start = model["start"]
-    $.get('templates/actions.mst', function(template) {
-        var rendered = Mustache.render(template, start);            
-        $('#placeholder').html(rendered);
-        console.log(rendered)
-      });
+    goto("start");
 });
 
 
 function goto(index){
     var s = model[index]
+    s.size = function() {
+      return s.actions.length == 1 ? "12" : "6";
+    };
+    s.tabSize = function() {
+      return s.actions.length == 1 ? "8" : "4";
+    };
+    s.phoneSize = function() {
+      return s.actions.length == 1 ? "4" : "2";
+    };
     $.get('templates/actions.mst', function(template) {
-        var rendered = Mustache.render(template, s);            
+        var rendered = Mustache.render(template, s);
         $('#placeholder').html(rendered);
         console.log(rendered)
     });

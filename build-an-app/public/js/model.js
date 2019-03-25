@@ -2,8 +2,8 @@ var model ={
     "start": {
         "image": "images/1.png",
         "text" : "Are you ready?",
-        "actions" : [ 
-            { 
+        "actions" : [
+            {
                 "text": "Accept Challenge",
                 "next": "challenge-accepted"
             }
@@ -27,7 +27,7 @@ var model ={
         "image" : "images/2.png",
         "text" : "Web, Mobile, Voice are different channels on how your users will experience your store functionality, features. Best practice is to build your functionality/features as a independent service (usually referred to a backend application) with well defined remote interefaces (APIs), Good Choice, what's Next?",
         "actions": [
-            { 
+            {
                 "text": "Let's get coding",
                 "next" : "lets-get-coding"
             },
@@ -58,7 +58,7 @@ var model ={
             }
         ]
     },
-    "lets-define-api-spec" : { 
+    "lets-define-api-spec" : {
         "image" : "images/3.png",
         "text" : "It's a good practice to start with spec and make sure, it will help deliver the kind of user experience you want to deliver, Good Choice!, whats next?",
         "actions": [
@@ -117,7 +117,7 @@ var model ={
             {
                 "text": "Publish the APIs in a portal, enable Self-service access for other teams",
                 "next" : "publish-apis-portal-enable-self-service"
-            }        
+            }
         ]
     },
     "create-pdf-send-to-ux-teams" : {

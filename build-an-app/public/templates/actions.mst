@@ -1,13 +1,20 @@
-<div class="col s9 m8 l8 xl9">
-        <img id="#img-holder" class="responsive-img" src="{{image}}">
+<div class="md-card center">
+    <img class="optimg" id="#img-holder" src="{{image}}">
 </div>
 
-<div class="col s3 m4 l4 xl3">
-<p>{{text}}
-{{#actions}}
-<div class="row">
-    <p>{{text}}</p>
-    <a class="waves-effect waves-light btn-small" onclick="goto('{{next}}')">Go</a>
-</div>
-{{/actions}}
+<div class="mdc-layout-grid qbox">
+  <h3 class="info center">{{text}}</h3>
+
+  <div class="mdc-layout-grid__inner">
+
+    {{#actions}}
+      <div class="mdc-layout-grid__cell
+        mdc-layout-grid__cell--span-{{size}}-desktop
+        mdc-layout-grid__cell--span-{{tabSize}}-tablet
+        mdc-layout-grid__cell--span-{{phoneSize}}-phone">
+        <a class="center mdc-button btnbg" onclick="goto('{{next}}')">{{text}}</a>
+      </div>
+    {{/actions}}
+
+  </div>
 </div>
