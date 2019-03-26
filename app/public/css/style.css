@@ -62,18 +62,18 @@ body {
 
 @media screen and (min-width: 980px) /* Desktop */ {
   .mid {
-    transform: translate(0, 35%);
+    transform: translate(0, 20%);
   }
 }
 
 @media screen  and (max-width: 979px) /* Tablet */ {
   .mid {
-    transform: translate(0, 40%);
+    transform: translate(0, 20%);
   }
 }
 
 @media screen and (max-width: 500px) /* Mobile */ {
   .mid {
-    transform: translate(0, 70%);
+    transform: translate(0, 20%);
   }
 }
