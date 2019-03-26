@@ -1,6 +1,6 @@
 var model;
 $( document ).ready(function() {
-    console.log( "ready!" );    
+    console.log( "ready!" );
     var m=getParameterByName('model')
     setModel(m)
     console.log(model)
@@ -12,7 +12,7 @@ function setModel(m){
   if (m=='build_model')
     model=build_model
   else
-    model=migrate_model  
+    model=migrate_model
 }
 
 function goto(index){
@@ -26,6 +26,7 @@ function goto(index){
     s.phoneSize = function() {
       return s.actions.length == 1 ? "4" : "2";
     };
+    
     $.get('templates/actions.mst', function(template) {
         var rendered = Mustache.render(template, s);
         $('#placeholder').html(rendered);
