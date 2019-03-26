@@ -1,5 +1,6 @@
 {
   "hosting": {
+    "target" : "appmod",
     "public": "public",
     "ignore": [
       "firebase.json",
