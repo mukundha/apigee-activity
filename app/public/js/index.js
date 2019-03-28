@@ -1,25 +1,25 @@
-var model;
+var baseModel;
 $( document ).ready(function() {
     console.log( "ready!" );
-    var m=getParameterByName('model')
-    setModel(m)
-    console.log(model)
-    if(model)
+    var m = getParameterByName('model')
+    setModel(m);
+    console.log(baseModel);
+    if(baseModel)
       goto("start");
 });
 
 function setModel(m){
-  if (m=='build_model')
-    model=build_model
+  if (m == 'build_model')
+    baseModel = build_model;
   else
-    model=migrate_model
+    baseModel = migrate_model;
 }
 
-function goto(index){    
-    var s = model[index]
+function goto(index){
+    var s = baseModel.model[index];
 
     if( !s ){
-      window.location.href="index.html"
+      window.location.href = "index.html";
     }
     s.size = function() {
       return s.actions.length == 1 ? "12" : "6";
@@ -30,7 +30,10 @@ function goto(index){
     s.phoneSize = function() {
       return s.actions.length == 1 ? "4" : "2";
     };
-    
+    s.title = function() {
+      return baseModel.name;
+    }
+
     $.get('templates/actions.mst', function(template) {
         var rendered = Mustache.render(template, s);
         $('#placeholder').html(rendered);
