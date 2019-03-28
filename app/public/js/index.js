@@ -50,7 +50,7 @@ function goto(index){
       var size = getScreenSize();
       var diff = size.width - size.height;
       console.log(diff);
-      if(diff > 600) {
+      if(diff > 710) {
         return "3";
       } else {
         return "2";
@@ -60,7 +60,7 @@ function goto(index){
     s.mid = function() {
       var size = getScreenSize();
       var diff = size.width - size.height;
-      if(diff > 600) {
+      if(diff > 710) {
         return "6";
       } else {
         return "8";
