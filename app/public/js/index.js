@@ -15,6 +15,18 @@ function setModel(m){
     baseModel = migrate_model;
 }
 
+function getScreenSize(){
+  var width = window.innerWidth
+    || document.documentElement.clientWidth
+    || document.body.clientWidth;
+
+    var height = window.innerHeight
+    || document.documentElement.clientHeight
+    || document.body.clientHeight;
+
+    return({"width":width, "height": height});
+}
+
 function goto(index){
     var s = baseModel.model[index];
 
@@ -32,6 +44,27 @@ function goto(index){
     };
     s.title = function() {
       return baseModel.name;
+    }
+
+    s.sides = function() {
+      var size = getScreenSize();
+      var diff = size.width - size.height;
+      console.log(diff);
+      if(diff > 600) {
+        return "3";
+      } else {
+        return "2";
+      }
+    }
+
+    s.mid = function() {
+      var size = getScreenSize();
+      var diff = size.width - size.height;
+      if(diff > 600) {
+        return "6";
+      } else {
+        return "8";
+      }
     }
 
     $.get('templates/actions.mst', function(template) {

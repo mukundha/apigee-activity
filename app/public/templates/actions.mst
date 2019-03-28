@@ -1,8 +1,8 @@
 <div class="mdc-layout-grid mid">
 
   <div class="mdc-layout-grid__inner">
-    <div class="mdc-layout-grid__cell--span-2"></div>
-    <div class="mdc-layout-grid__cell--span-8">
+    <div class="mdc-layout-grid__cell--span-{{sides}}"></div>
+    <div class="mdc-layout-grid__cell--span-{{mid}}">
       <h2 class="title" align="center">{{title}}</h2>
       <div class="md-card">
         <div class="mdc-card__primary-action demo-card__primary-action" tabindex="0">
@@ -10,7 +10,7 @@
       </div>
       </div>
     </div>
-    <div class="mdc-layout-grid__cell--span-2"></div>
+    <div class="mdc-layout-grid__cell--span-{{sides}}"></div>
   </div>
 </div>
 
