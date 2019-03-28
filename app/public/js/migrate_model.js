@@ -161,7 +161,7 @@ var migrate_model ={
         "actions": [
             {
                 "text" : "Lets go Home",
-                "next" : "start"
+                "next" : "finish"
             },
             {
                 "text": "Wait, I want to expand to more regions",
@@ -175,7 +175,7 @@ var migrate_model ={
         "actions": [
             {
                 "text" : "Cool!, Lets go Home",
-                "next" : "start"
+                "next" : "finish"
             }
         ]
     }

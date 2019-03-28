@@ -12,14 +12,14 @@ var build_model ={
     "challenge-accepted" : {
         "image": "images/build_app/11.png",
         "text" : "How do you approach?",
-        "actions" : [
-            {
-                "text" : "Start by building a web app",
-                "next": "are-you-sure-about-webapp"
-            },
+        "actions" : [            
             {
                 "text" : "Start by building a API Backend",
                 "next" : "start-with-apibackend"
+            },
+            {
+                "text" : "Start by building a web app",
+                "next": "are-you-sure-about-webapp"
             }
         ]
     },
@@ -63,13 +63,13 @@ var build_model ={
         "text" : "It's a good practice to start with spec and make sure, it will help deliver the kind of user experience you want to deliver, Good Choice!, whats next?",
         "actions": [
             {
-                "text": "Let's implement the spec",
-                "next" : "lets-implement-the-spec"
-            },
-            {
                 "text": "Let's setup a sandbox with Mock",
                 "next" : "lets-setup-a-sandbox-with-mock"
-            }
+            },
+            {
+                "text": "Let's implement the spec",
+                "next" : "lets-implement-the-spec"
+            }            
         ]
     },
     "lets-implement-the-spec": {
@@ -111,13 +111,13 @@ var build_model ={
         "text" : "While you might be thinking, whether assembling the UX teams is the first step or whether it fits here, Remember you need to have this sorted atleast at this stage when you have the sandbox ready, if you can do it earlier, its even better and gives them an opportunity to collaborate on the API spec as well, So far very good, What's next?",
         "actions" : [
             {
-                "text" : "Create a pdf API doc and send it to UX team",
-                "next" : "create-pdf-send-to-ux-teams"
-            },
-            {
                 "text": "Publish the APIs in a portal, enable Self-service access for other teams",
                 "next" : "publish-apis-portal-enable-self-service"
-            }
+            },
+            {
+                "text" : "Create a pdf API doc and send it to UX team",
+                "next" : "create-pdf-send-to-ux-teams"
+            }            
         ]
     },
     "create-pdf-send-to-ux-teams" : {
@@ -159,13 +159,13 @@ var build_model ={
         "text" : "There are several application architectures, Microservices is one of them and is gaining lot of momemtum among developers and even businesses for the benefits it brings (you sure would have heard about them), if you are starting new, it might be better for you to design your applications in microservices based architecture, Most of the times its helpful",
         "actions" : [
             {
-                "text" : "Got the requirements, lets go coding",
-                "next" : "got-the-requirements-lets-go-coding"
-            },
-            {
                 "text" : "Lets separate business logic vs business policy",
                 "next" : "lets-separate-business-logic-business-policy"
-            }
+            },
+            {
+                "text" : "Got the requirements, lets go coding",
+                "next" : "got-the-requirements-lets-go-coding"
+            }            
         ]
     },
     "got-the-requirements-lets-go-coding": {
@@ -232,7 +232,7 @@ var build_model ={
         "actions" : [
             {
                 "text" : "Lets give someone else a chance now ;)",
-                "next" : "start"
+                "next" : "finish"
             }
         ]
     }

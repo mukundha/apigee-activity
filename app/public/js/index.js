@@ -15,8 +15,12 @@ function setModel(m){
     model=migrate_model
 }
 
-function goto(index){
+function goto(index){    
     var s = model[index]
+
+    if( !s ){
+      window.location.href="index.html"
+    }
     s.size = function() {
       return s.actions.length == 1 ? "12" : "6";
     };
